@@ -1,0 +1,652 @@
+@font-face {
+   font-family: RampartOne;
+   src: url(RampartOne-Regular.ttf);
+}
+ 
+@font-face {
+  font-family: Lexend;
+  src: url(Lexend-Regular.ttf);
+}
+  
+html {
+  scroll-behavior: smooth;
+}
+  
+body {
+  background-image: url("stars.jpg");
+  font-family: Lexend, sans-serif;
+  color: #dbdabf;
+}
+
+header {
+  text-align: center;
+  font-family: RampartOne, sans-serif;
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+header img {
+   max-width: 10vw;
+}
+  
+nav {
+  background-color: #022144;
+  width: 100%;
+  font-size: 200%;
+  text-align: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+  
+nav ul li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+  
+nav a:link,
+nav a:visited,
+a.book {
+  background-color: rgb(214, 202, 150);
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ }
+  
+nav a:hover,
+nav a:active,
+nav a:focus,
+a.book:hover,
+a.book:active,
+a.book:focus {
+  background-color: black; 
+  color: rgb(214, 202, 150);
+}
+
+nav a.current {
+  background-color: #ebbefc;
+  transition: 0.4s;
+}
+
+nav a,
+a.book {
+  transition: background-color 0.8s, color 0.8s;
+}
+  
+main, #getbooking {
+  margin: 1vw;
+}
+  
+section {
+  border: 5px solid;
+  border-color: #dbdabf;
+  display: block;
+  box-sizing: border-box;
+  background-color: #022144;
+  padding: 2vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+  
+h1 {
+  font-family: RampartOne, sans-serif;
+  display: inline-block;
+}
+
+h2 {
+  font-family: RampartOne, sans-serif;
+  display: inline-block;
+  font-size: 200%;
+}
+
+a:link,
+a:visited{
+  color: #ebbefc;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color :#022144;
+  background-color: #ebbefc;
+}
+
+div.standard {
+  grid-area: st;
+  text-align: center;
+}
+
+div.firstclass {
+  grid-area: fc;
+  text-align: center;
+}
+
+div.seating {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "st fc";
+}
+
+div.seating > div > img {
+  width: 40vw;
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  padding: 1vw;
+  text-align: start;
+  border: #022144;
+}
+
+th,
+tfoot > tr > td {
+  background-color: black;
+  color: #dbdabf;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4) {
+  width: 20%;
+}
+
+td:first-child {
+  min-width: 40%;
+}
+
+tr:nth-child(2n) {
+  background-color: #dbdabf;
+  color: black;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #ebbefc;
+  color: black;
+}
+
+div.cardgrid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
+
+div.flipcard {
+  border: 3px solid;
+  padding: 5px 10px 5px 10px;
+  border-color: #dbdabf;
+  background-color: #022144;
+  height: 320px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+img.poster {
+  width: 200px;
+  box-sizing: border-box;
+  grid-area: po;
+}
+
+div.movietitle {
+  grid-area: mt;
+  align-self: center;
+}
+
+div.synopsis {
+  grid-area: sy;
+}
+
+div.screening {
+  grid-area: sc; 
+  grid-template-areas: "sy sc";
+  text-align: center;
+}
+
+div.front {
+  font-size: 150%;
+  display: grid;
+  width: 90%;
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: 2s;
+  gap: 20px;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "po mt";
+  transform: rotateY(0deg);
+}
+
+div.back {
+  font-size: 120%;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "sy sc";
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: 2s;
+  transform: rotateY(180deg);
+}
+
+div.flipcard:hover > div.front,
+div.flipcard:focus > div.front {
+  transform: rotateY(180deg);
+}
+
+div.flipcard:hover > div.back,
+div.flipcard:focus > div.back {
+  transform: rotateY(360deg);
+}
+
+a.book {
+  font-size: 150%;
+  color: black;
+}
+
+footer {
+  font-size: 70%;
+}
+
+#getbooking {
+  font-size: initial;
+}
+
+footer > p {
+  font-size: 150%;
+}
+
+div.filminfo {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+iframe {
+  align-self: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+div.film {
+  display: flex;
+  width: 100%;
+}
+
+div.seatselect {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  row-gap: 40px;
+}
+
+fieldset {
+  display: grid;
+  width: 100%;
+  border-width: 0px;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  row-gap: 40px;
+ }
+
+input[type="radio"] {
+  display: none;
+  position: absolute;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  color: black;
+  width: 150px;
+  text-align: center;
+  border-radius: 1em;
+  background-color: rgb(214, 202, 150);
+  border-bottom: solid 5px rgb(70, 65, 42);
+  padding: 10px;
+}
+
+input[type="radio"]:checked + label {
+  border-bottom: solid 1px rgb(70, 65, 42);
+  margin-top: 5px;
+}
+
+div.purchaserdetails {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  row-gap: 40px;
+}
+
+input[pattern]:invalid {
+  border: 2px red solid;
+  background-color:rgb(238, 189, 189);
+}
+
+#noseats,
+#noscreen {
+  display: none;
+}
+
+#noseats.isError,
+#noscreen.isError,
+.inputerror,
+.searcherror {
+  display: block;
+  width: fit-content;
+  background-color: rgb(238, 189, 189);
+  color: red;
+}
+
+.searcherror {
+  font-size: 300%;
+}
+
+#submit {
+  display: inline-block;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+  border-radius: 1em;
+  background-color: #ebbefc;
+  border-bottom: solid 5px #9b7aa7;
+  padding: 10px;
+}
+
+#submit:active {
+  border-bottom: solid 1px;
+  margin-top: 5px;
+}
+
+#remember-forget {
+  display: none;
+  position: absolute;
+}
+
+#remember-forget + label {
+  display: inline-block;
+  color: black;
+  font-size: larger;
+  font-weight: bold;
+  width: 170px;
+  text-align: center;
+  border-radius: 1em;
+  background-color: rgb(214, 202, 150);
+  border-bottom: solid 5px rgb(70, 65, 42);
+  padding: 10px;
+}
+
+#remember-forget:checked + label {
+  border-bottom: solid 1px;
+  margin-top: 5px;
+}
+
+div.userdetails {
+  position: relative;
+  grid-area: ud;
+}
+
+div.seeingmovie {
+  position: relative;
+  grid-area: sm;
+}
+
+#userandmovie {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "ud sm"
+}
+
+#contactheader {
+  font-family: Lexend, sans-serif;
+  color: #dbdabf;
+  font-size: initial;
+  font-weight: initial;
+}
+
+.ticket {
+  width: 300px;
+  display: block;
+  align-self: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 15px;
+}
+
+.ticketheading {
+  display: block;
+}
+
+.tickettitle {
+  font-size: 150%;
+}
+
+.ticketbody > div {
+  display: block;
+  align-content: center;
+  text-align: center;
+}
+
+#booking > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+#booking > div > div {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  input[type="radio"] + label {
+    width: 120px;
+  }
+
+  div.purchaserdetails {
+    grid-template-columns: 35% 35% 35%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    font-size: 170%;
+  }
+
+  div.cardgrid {
+    grid-template-columns: 100%;
+  }
+
+  input[type="radio"] + label {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    font-size: 150%;
+  }
+
+  fieldset {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+  div.purchaserdetails {
+    grid-template-columns: 25% 25%;
+  }
+
+  div.purchaserdetails > div {
+    display: grid;
+    grid-template-columns: 80%;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  iframe {
+    min-width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    font-size: 130%;
+  }
+
+  section {
+    font-size: 80%;
+  }
+
+  div.film {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 500px;
+  }
+
+  div.seatselect {
+    grid-template-columns: 50% 30%;
+  }
+
+  input[type="radio"] + label {
+   width: 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.seatselect {
+    grid-template-columns: 100%;
+  }
+
+  div.purchaserdetails {
+    grid-template-columns: 70%;
+  }
+
+  div.purchaserdetails > div {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    font-size: 80%;
+  }
+
+  iframe {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    font-size: 90%;
+  }
+
+  div.seating {
+    grid-template-areas: "st"
+                         "fc";
+  }
+
+  div.seating > div > img {
+    width: 50vw;
+  }
+
+  div.cardgrid {
+    grid-template-columns: 100%;
+    font-size: 90%;
+  }
+
+  div.front {
+  grid-template-areas: "mt"
+                       "po";
+  }
+
+  div.back {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "sy"
+                         "sc";
+    }
+
+  div.flipcard {
+    height: 400px;
+  }
+
+  iframe {
+    width: 350px;
+  }
+
+  fieldset {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  nav {
+    font-size: 75%;
+  }
+
+  #userandmovie {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "ud"
+                         "sm"
+  }
+
+  #booking {
+    grid-template-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav {
+    font-size: 65%;
+  }
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  nav, footer, aside {
+    display: none;
+  }
+  
+  .printmessage {
+    display: none;
+  }
+
+  #receipt {
+    page-break-after: always;
+    border-color: black;
+  }
+
+  .ticket {
+    display: inline-block;
+    width: 250px;
+    page-break-inside: avoid;
+    border-color: black;
+  }
+}

@@ -1,0 +1,13 @@
+Order Date	Name	EMail	Mobile	Movie Code	Day of Movie	Time of Movie	# STA	$ STA	# STP	$ STP	# STC	$ STC	# FCA	$ FCA	# FCP	$ FCP	# FCC	$ FCC	Total	GST
+02/03/2023	"Simon Windsor"	s3918370@student.rmit.edu.au	0411111111	FAM	Monday	12:00pm	2	43	0	0	2	35	0	0	0	0	0	0	78.00	7.09
+02/03/2023	"Simon Windsor"	s3918370@student.rmit.edu.au	0411111111	ACT	Wednesday	9:00pm	0	0	0	0	0	0	2	62	0	0	0	0	62.00	5.64
+02/03/2023	"Greg Gregson"	greg@gregson.com	0400000000	AHF	Saturday	10:00pm	0	0	10	145	0	0	0	0	0	0	0	0	145.00	13.18
+02/03/2023	"Clark Clarkson"	d@d.d	0412345678	RMC	Friday	12:00pm	0	0	0	0	0	0	0	0	5	140	0	0	140.00	12.73
+02/03/2023	"Bob Bobson"	b@b.b	0498798765	RMC	Sunday	3:00pm	0	0	0	0	0	0	2	50	0	0	0	0	50.00	4.55
+02/03/2023	"Bill Smith"	smith@billsmail.com	0422222222	RMC	Thursday	12:00pm	0	0	2	38	0	0	0	0	0	0	0	0	38.00	3.45
+02/03/2023	"Phil S"	s@phil.s	0412321456	AHF	Tuesday	6:00pm	1	16	0	0	0	0	0	0	0	0	0	0	16.00	1.45
+02/03/2023	"Kiddy Winks"	istolemyparentsemail@naughty.com	0478998778	FAM	Thursday	6:00pm	0	0	0	0	3	52.5	0	0	0	0	0	0	52.50	4.77
+03/03/2023	"Hugh Hughs"	hughs@gmail.com	0455999888	ACT	Friday	9:00pm	4	86	0	0	10	175	0	0	0	0	0	0	261.00	23.73
+03/03/2023	"Another Test"	test@test.test	0400000000	FAM	Tuesday	12:00pm	1	21.5	0	0	0	0	0	0	0	0	0	0	21.50	1.95
+03/03/2023	"Neil Legweak"	neail@hotmail.com	0433555222	ACT	Tuesday	9:00pm	3	48	0	0	0	0	0	0	0	0	0	0	48.00	4.36
+03/03/2023	a	a@b.c	0400000000	AHF	Monday	6:00pm	0	0	0	0	0	0	0	0	1	23.5	0	0	23.50	2.14
