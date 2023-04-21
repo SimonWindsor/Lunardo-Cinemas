@@ -1,2 +1,2 @@
 # Lunardo-Cinemas
-A project  Icimpleted whist studying thorugh RMIT University
+A project completed whist studying thorugh RMIT University
